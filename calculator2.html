@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator 2</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container_block{
+            background-color: black;
+            padding: 15px;
+            border-radius: 15px;
+        }
+        .input_row input{
+            width: 150px;
+            height: 25px;
+            margin: 5px;
+            background-color: black;
+            color: white;
+            margin-bottom: 20px;
+            border: none;
+            
+        }
+        .row button{
+            width: 35px;
+            height: 35px;
+            border: none;
+            border-radius: 40px;
+            margin: 2px;
+            color: white;
+            font-style: bold;
+            font-size: 15px;
+        }
+        .btn{
+            background-color: rgb(31, 31, 31);
+        }
+        .clr{
+            background-color: orange;
+        }
+        .gryclr{
+            background-color: gray;
+        }
+        .gryclr:hover{
+            background-color: rgba(255, 255, 255, 0.712);
+        }
+        button:hover{
+            background-color: rgba(255, 255, 255, 0.562);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="container_block">
+            <div class="input_row">
+                <input type="text" class="Result_preview">
+            </div>
+            <div class="row">
+                <button class="btn gryclr">AC</button>
+                <button class="btn gryclr">C</button>
+                <button class="btn gryclr">%</button>
+                <button class="btn clr">/</button>
+            </div>
+            <div class="row">
+                <button class="btn">7</button>
+                <button class="btn">8</button>
+                <button class="btn">9</button>
+                <button class="btn clr">*</button>
+            </div>
+            <div class="row">
+                <button class="btn">4</button>
+                <button class="btn">5</button>
+                <button class="btn">6</button>
+                <button class="btn clr">-</button>
+            </div>
+            <div class="row">
+                <button class="btn">1</button>
+                <button class="btn">2</button>
+                <button class="btn">3</button>
+                <button class="btn clr">+</button>
+            </div>
+            <div class="row">
+                <button class="btn">AC</button>
+                <button class="btn">0</button>
+                <button class="btn">.</button>
+                <button class="btn clr">=</button>
+            </div>
+        </div>
+    </div>    
+
+
+
+   <script>
+    let buttons = document.querySelectorAll('button');
+    let string= document.querySelector('.Result_preview')
+        buttons.forEach(function (e){
+            e.addEventListener('click', function (){               
+                if(e.innerText== '='){
+                    string.value = eval(string.value)
+                }
+                else if(e.innerText == "AC"){                    
+                    string.value='';
+                }
+                else if(e.innerText == "C"){
+                    let str = string.value;
+                    string.value=str.slice(0,-1)
+                }
+                else {
+                    string.value += e.innerText;
+                }
+            })
+        })
+   </script> 
+</body>
+</html>

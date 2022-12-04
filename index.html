@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">    
+</head>
+<body>
+    <div class="container">
+        <div class="container_block">
+            <div class="input_row">
+                <input type="text" class="Result_preview">
+            </div>
+            <div class="row">
+                <button class="btn gryclr" onclick="clearval()">AC</button>
+                <button class="btn gryclr" onclick="digit()">C</button>
+                <button class="btn gryclr" onclick="clickedval(this)">%</button>
+                <button class="btn clr" onclick="clickedval(this)">/</button>
+            </div>
+            <div class="row">
+                <button class="btn" onclick="clickedval(this)">7</button>
+                <button class="btn" onclick="clickedval(this)">8</button>
+                <button class="btn" onclick="clickedval(this)">9</button>
+                <button class="btn clr" onclick="clickedval(this)">*</button>
+            </div>
+            <div class="row">
+                <button class="btn" onclick="clickedval(this)">4</button>
+                <button class="btn" onclick="clickedval(this)">5</button>
+                <button class="btn" onclick="clickedval(this)">6</button>
+                <button class="btn clr" onclick="clickedval(this)">-</button>
+            </div>
+            <div class="row">
+                <button class="btn" onclick="clickedval(this)">1</button>
+                <button class="btn" onclick="clickedval(this)">2</button>
+                <button class="btn" onclick="clickedval(this)">3</button>
+                <button class="btn clr" onclick="clickedval(this)">+</button>
+            </div>
+            <div class="row">
+                <button class="btn" onclick="clearval()">AC</button>
+                <button class="btn" onclick="clickedval(this)">0</button>
+                <button class="btn" onclick="clickedval(this)">.</button>
+                <button class="btn clr" onclick="calculate()">=</button>
+            </div>
+        </div>
+    </div>
+ <script src="./script.js"></script>
+</body>
+</html>

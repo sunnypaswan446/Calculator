@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container_block{
+    background-color: black;
+    padding: 15px;
+    border-radius: 15px;
+}
+.input_row input{
+    width: 150px;
+    height: 25px;
+    margin: 5px;
+    background-color: black;
+    color: white;
+    margin-bottom: 20px;
+    border: none;
+    
+}
+.row button{
+    width: 35px;
+    height: 35px;
+    border: none;
+    border-radius: 40px;
+    margin: 2px;
+    color: white;
+    font-style: bold;
+    font-size: 15px;
+}
+.btn{
+    background-color: rgb(31, 31, 31);
+}
+.clr{
+    background-color: orange;
+}
+.gryclr{
+    background-color: gray;
+}
+.gryclr:hover{
+    background-color: rgba(255, 255, 255, 0.712);
+}
+button:hover{
+    background-color: rgba(255, 255, 255, 0.562);
+}
